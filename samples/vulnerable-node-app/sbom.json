@@ -1,0 +1,29 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:a17f050f-8fc4-4e28-87fc-e9e7cbc01a61",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-07-25T04:54:19.687953+00:00",
+    "component": {
+      "type": "application",
+      "name": "vulnerable-node-app"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "lodash",
+      "version": "4.17.15",
+      "purl": "pkg:npm/lodash@4.17.15",
+      "scope": "required"
+    },
+    {
+      "type": "library",
+      "name": "minimist",
+      "version": "1.2.0",
+      "purl": "pkg:npm/minimist@1.2.0",
+      "scope": "required"
+    }
+  ]
+}

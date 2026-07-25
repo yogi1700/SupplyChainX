@@ -1,0 +1,50 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:446302a7-4ad5-41c4-a506-913366f9f399",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-07-25T04:53:32.834829+00:00",
+    "component": {
+      "type": "application",
+      "name": "vulnerable-python-app"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "django",
+      "version": "3.2.0",
+      "purl": "pkg:pypi/django@3.2.0",
+      "scope": "required"
+    },
+    {
+      "type": "library",
+      "name": "flask",
+      "version": "0.12.2",
+      "purl": "pkg:pypi/flask@0.12.2",
+      "scope": "required"
+    },
+    {
+      "type": "library",
+      "name": "pillow",
+      "version": "8.0.0",
+      "purl": "pkg:pypi/pillow@8.0.0",
+      "scope": "required"
+    },
+    {
+      "type": "library",
+      "name": "pyyaml",
+      "version": "5.3.1",
+      "purl": "pkg:pypi/pyyaml@5.3.1",
+      "scope": "required"
+    },
+    {
+      "type": "library",
+      "name": "requests",
+      "version": "2.19.1",
+      "purl": "pkg:pypi/requests@2.19.1",
+      "scope": "required"
+    }
+  ]
+}

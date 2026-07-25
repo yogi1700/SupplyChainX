@@ -1,0 +1,1357 @@
+[
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-j7hp-h8jx-5ppr",
+    "cve_ids": [
+      "CVE-2023-4863",
+      "CVE-2023-5129"
+    ],
+    "summary": "libwebp: OOB write in BuildHuffmanTable",
+    "cvss_score": 8.8,
+    "epss_score": 0.99735,
+    "in_kev": true,
+    "tier": "CRITICAL",
+    "reason": "confirmed under active exploitation (CISA KEV)"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-2gwj-7jmv-h26r",
+    "cve_ids": [
+      "CVE-2022-28346"
+    ],
+    "summary": "SQL Injection in Django",
+    "cvss_score": 9.8,
+    "epss_score": 0.18516,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 9.8, EPSS 19%, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-p64x-8rxx-wf6q",
+    "cve_ids": [
+      "CVE-2022-34265"
+    ],
+    "summary": "Django `Trunc()` and `Extract()` database functions vulnerable to SQL Injection",
+    "cvss_score": 9.8,
+    "epss_score": 0.73274,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 9.8, EPSS 73%, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-r3xc-prgr-mg9p",
+    "cve_ids": [
+      "CVE-2023-31047"
+    ],
+    "summary": "Django bypasses validation when using one form field to upload multiple files",
+    "cvss_score": 9.8,
+    "epss_score": 0.0138,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 9.8, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-w24h-v9qh-8gxj",
+    "cve_ids": [
+      "CVE-2022-28347"
+    ],
+    "summary": "SQL Injection in Django",
+    "cvss_score": 9.8,
+    "epss_score": 0.02919,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 9.8, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-xpfp-f569-q3p2",
+    "cve_ids": [
+      "CVE-2021-35042"
+    ],
+    "summary": "SQL Injection in Django",
+    "cvss_score": 9.8,
+    "epss_score": 0.44369,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 9.8, EPSS 44%, direct dependency"
+  },
+  {
+    "package": "pyyaml",
+    "version": "5.3.1",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-8q59-q68h-6hv4",
+    "cve_ids": [
+      "CVE-2020-14343"
+    ],
+    "summary": "Improper Input Validation in PyYAML",
+    "cvss_score": 9.8,
+    "epss_score": 0.05984,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 9.8, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-57h3-9rgr-c24m",
+    "cve_ids": [
+      "CVE-2021-25289"
+    ],
+    "summary": "Out of bounds write in Pillow",
+    "cvss_score": 9.8,
+    "epss_score": 0.02281,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 9.8, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-7534-mm45-c74v",
+    "cve_ids": [
+      "CVE-2021-34552"
+    ],
+    "summary": "Buffer Overflow in Pillow",
+    "cvss_score": 9.8,
+    "epss_score": 0.03162,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 9.8, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-8vj2-vxx3-667w",
+    "cve_ids": [
+      "CVE-2022-22817"
+    ],
+    "summary": "Arbitrary expression injection in Pillow",
+    "cvss_score": 9.8,
+    "epss_score": 0.03399,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 9.8, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-frmv-pr5f-9mcr",
+    "cve_ids": [
+      "CVE-2025-64459"
+    ],
+    "summary": "Django vulnerable to SQL injection via _connector keyword argument in QuerySet and Q objects.",
+    "cvss_score": 9.1,
+    "epss_score": 0.19396,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 9.1, EPSS 19%, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-77gc-v2xv-rvvh",
+    "cve_ids": [
+      "CVE-2021-25287"
+    ],
+    "summary": "Out-of-bounds Read in Pillow",
+    "cvss_score": 9.1,
+    "epss_score": 0.02876,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 9.1, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-9j59-75qj-795w",
+    "cve_ids": [
+      "CVE-2022-24303"
+    ],
+    "summary": "Path traversal in Pillow",
+    "cvss_score": 9.1,
+    "epss_score": 0.02811,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 9.1, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-rwv7-3v45-hg29",
+    "cve_ids": [
+      "CVE-2021-25288"
+    ],
+    "summary": "Pillow Out-of-bounds Read vulnerability",
+    "cvss_score": 9.1,
+    "epss_score": 0.02342,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 9.1, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-8x94-hmjh-97hq",
+    "cve_ids": [
+      "CVE-2022-36359"
+    ],
+    "summary": "Django vulnerable to Reflected File Download attack",
+    "cvss_score": 8.8,
+    "epss_score": 0.00657,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 8.8, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-vqcj-wrf2-7v73",
+    "cve_ids": [
+      "CVE-2020-35654"
+    ],
+    "summary": "Pillow Out-of-bounds Write",
+    "cvss_score": 8.8,
+    "epss_score": 0.01789,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 8.8, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-xj96-63gp-2gmr",
+    "cve_ids": [
+      "CVE-2026-59197"
+    ],
+    "summary": "Pillow: Heap out-of-bounds write in `ImageFilter.RankFilter` via integer overflow in `ImagingExpand`",
+    "cvss_score": 8.2,
+    "epss_score": 0.00436,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 8.2, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-3f63-hfp8-52jq",
+    "cve_ids": [
+      "CVE-2023-50447"
+    ],
+    "summary": "Arbitrary Code Execution in Pillow",
+    "cvss_score": 8.1,
+    "epss_score": 0.01703,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 8.1, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-2hrw-hx67-34x6",
+    "cve_ids": [
+      "CVE-2023-24580"
+    ],
+    "summary": "Resource exhaustion in Django",
+    "cvss_score": 7.5,
+    "epss_score": 0.62575,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, EPSS 63%, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-53qw-q765-4fww",
+    "cve_ids": [
+      "CVE-2021-45115"
+    ],
+    "summary": "Denial-of-service in Django",
+    "cvss_score": 7.5,
+    "epss_score": 0.02397,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-6cw3-g6wv-c2xv",
+    "cve_ids": [
+      "CVE-2022-23833"
+    ],
+    "summary": "Infinite Loop in Django",
+    "cvss_score": 7.5,
+    "epss_score": 0.49246,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, EPSS 49%, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-8c5j-9r9f-c6w8",
+    "cve_ids": [
+      "CVE-2021-45116"
+    ],
+    "summary": "Information disclosure in Django",
+    "cvss_score": 7.5,
+    "epss_score": 0.01855,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-jh3w-4vvf-mjgr",
+    "cve_ids": [
+      "CVE-2023-36053"
+    ],
+    "summary": "Django has regular expression denial of service vulnerability in EmailValidator/URLValidator",
+    "cvss_score": 7.5,
+    "epss_score": 0.02978,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-p99v-5w3c-jqq9",
+    "cve_ids": [
+      "CVE-2021-33571"
+    ],
+    "summary": "Django Access Control Bypass possibly leading to SSRF, RFI, and LFI attacks ",
+    "cvss_score": 7.5,
+    "epss_score": 0.05217,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-q2jf-h9jm-m7p4",
+    "cve_ids": [
+      "CVE-2023-23969"
+    ],
+    "summary": "Django contains Uncontrolled Resource Consumption via cached header",
+    "cvss_score": 7.5,
+    "epss_score": 0.47102,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, EPSS 47%, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-qmf9-6jqf-j8fq",
+    "cve_ids": [
+      "CVE-2023-46695"
+    ],
+    "summary": "Django potential denial of service vulnerability in UsernameField on Windows",
+    "cvss_score": 7.5,
+    "epss_score": 0.49774,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, EPSS 50%, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-qrw5-5h28-6cmg",
+    "cve_ids": [
+      "CVE-2022-41323"
+    ],
+    "summary": "Django denial-of-service vulnerability in internationalized URLs",
+    "cvss_score": 7.5,
+    "epss_score": 0.0272,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-qw25-v68c-qjf3",
+    "cve_ids": [
+      "CVE-2025-64458"
+    ],
+    "summary": "Django has a denial-of-service vulnerability in HttpResponseRedirect and HttpResponsePermanentRedirect on Windows",
+    "cvss_score": 7.5,
+    "epss_score": 0.0193,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-rxjp-mfm9-w4wr",
+    "cve_ids": [
+      "CVE-2021-31542"
+    ],
+    "summary": "Path Traversal in Django",
+    "cvss_score": 7.5,
+    "epss_score": 0.05291,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "requests",
+    "version": "2.19.1",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-x84v-xcm2-53pg",
+    "cve_ids": [
+      "CVE-2018-18074"
+    ],
+    "summary": "Insufficiently Protected Credentials in Requests",
+    "cvss_score": 7.5,
+    "epss_score": 0.07443,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-3wvg-mj6g-m9cv",
+    "cve_ids": [
+      "CVE-2021-27922"
+    ],
+    "summary": "Pillow Uncontrolled Resource Consumption",
+    "cvss_score": 7.5,
+    "epss_score": 0.04851,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-45hq-cxwh-f6vc",
+    "cve_ids": [
+      "CVE-2026-55379"
+    ],
+    "summary": "Pillow `BdfFontFile`: `Image.new()` called without `_decompression_bomb_check()` \u2014 bomb protection bypass via font loading",
+    "cvss_score": 7.5,
+    "epss_score": 0.00421,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-5x94-69rx-g8h2",
+    "cve_ids": [
+      "CVE-2026-54060"
+    ],
+    "summary": "Pillow: `FontFile.compile()`: `Image.new()` called without `_decompression_bomb_check()`",
+    "cvss_score": 7.5,
+    "epss_score": 0.00418,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-6r8x-57c9-28j4",
+    "cve_ids": [
+      "CVE-2026-59199"
+    ],
+    "summary": "Pillow: Heap out-of-bounds write `Image.paste()` / `Image.crop()` via signed coordinate overflow",
+    "cvss_score": 7.5,
+    "epss_score": 0.00385,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-7r7m-5h27-29hp",
+    "cve_ids": [
+      "CVE-2021-28676"
+    ],
+    "summary": "Potential infinite loop in Pillow",
+    "cvss_score": 7.5,
+    "epss_score": 0.02453,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-8ghj-p4vj-mr35",
+    "cve_ids": [
+      "CVE-2023-44271"
+    ],
+    "summary": "Pillow Denial of Service vulnerability",
+    "cvss_score": 7.5,
+    "epss_score": 0.01131,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-8v84-f9pq-wr9x",
+    "cve_ids": [
+      "CVE-2026-54059"
+    ],
+    "summary": "Pillow `PcfFontFile._load_bitmaps()`: `Image.frombytes()` called without `_decompression_bomb_check()` \u2014 bomb protection bypass via PCF font loading",
+    "cvss_score": 7.5,
+    "epss_score": 0.0041,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-8xjq-8fcg-g5hw",
+    "cve_ids": [
+      "CVE-2021-25290"
+    ],
+    "summary": "Out-of-bounds Write in Pillow",
+    "cvss_score": 7.5,
+    "epss_score": 0.02372,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-95q3-8gr9-gm8w",
+    "cve_ids": [
+      "CVE-2021-27923"
+    ],
+    "summary": "Pillow Denial of Service by Uncontrolled Resource Consumption",
+    "cvss_score": 7.5,
+    "epss_score": 0.03071,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-98vv-pw6r-q6q4",
+    "cve_ids": [
+      "CVE-2021-23437"
+    ],
+    "summary": "Uncontrolled Resource Consumption in pillow",
+    "cvss_score": 7.5,
+    "epss_score": 0.03154,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-9hw9-ch79-4vh6",
+    "cve_ids": [
+      "CVE-2026-59205"
+    ],
+    "summary": "Pillow: Controlled heap out-of-bounds write in Pillow `ImageCmsTransform.apply()` via output mode mismatch",
+    "cvss_score": 7.5,
+    "epss_score": 0.00385,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-f4w8-cv6p-x6r5",
+    "cve_ids": [
+      "CVE-2021-27921"
+    ],
+    "summary": "Pillow Denial of Service by Uncontrolled Resource Consumption",
+    "cvss_score": 7.5,
+    "epss_score": 0.0317,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-jgpv-4h4c-xhw3",
+    "cve_ids": [],
+    "summary": "Uncontrolled Resource Consumption in pillow",
+    "cvss_score": 7.5,
+    "epss_score": null,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-jjj6-mw9f-p565",
+    "cve_ids": [
+      "CVE-2026-59200"
+    ],
+    "summary": "Pillow: Decompression Bomb DoS via PdfParser.PdfStream.decode()",
+    "cvss_score": 7.5,
+    "epss_score": 0.00385,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-m2vv-5vj5-2hm7",
+    "cve_ids": [
+      "CVE-2022-45198"
+    ],
+    "summary": "Pillow vulnerable to Data Amplification attack.",
+    "cvss_score": 7.5,
+    "epss_score": 0.01184,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-mvg9-xffr-p774",
+    "cve_ids": [
+      "CVE-2021-25291"
+    ],
+    "summary": "Out of bounds read in Pillow",
+    "cvss_score": 7.5,
+    "epss_score": 0.01425,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-p43w-g3c5-g5mq",
+    "cve_ids": [
+      "CVE-2021-25293"
+    ],
+    "summary": "Out of bounds read in Pillow",
+    "cvss_score": 7.5,
+    "epss_score": 0.01601,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-phj9-mv4w-65pm",
+    "cve_ids": [
+      "CVE-2026-55380"
+    ],
+    "summary": "Pillow `GdImageFile._open()`: image dimensions accepted without `_decompression_bomb_check()`",
+    "cvss_score": 7.5,
+    "epss_score": 0.00418,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-q5hq-fp76-qmrc",
+    "cve_ids": [
+      "CVE-2021-28677"
+    ],
+    "summary": "Uncontrolled Resource Consumption in Pillow",
+    "cvss_score": 7.5,
+    "epss_score": 0.02293,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "flask",
+    "version": "0.12.2",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-562c-5r94-xh97",
+    "cve_ids": [
+      "CVE-2018-1000656"
+    ],
+    "summary": "Flask is vulnerable to Denial of Service via incorrect encoding of JSON data",
+    "cvss_score": 7.5,
+    "epss_score": 0.03855,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "flask",
+    "version": "0.12.2",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-5wv5-4vpf-pj6m",
+    "cve_ids": [
+      "CVE-2019-1010083"
+    ],
+    "summary": "Pallets Project Flask is vulnerable to Denial of Service via Unexpected memory usage",
+    "cvss_score": 7.5,
+    "epss_score": 0.01884,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "flask",
+    "version": "0.12.2",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-m2qf-hxjv-5gpq",
+    "cve_ids": [
+      "CVE-2023-30861"
+    ],
+    "summary": "Flask vulnerable to possible disclosure of permanent session cookie due to missing Vary: Cookie header",
+    "cvss_score": 7.5,
+    "epss_score": 0.01216,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-v6rh-hp5x-86rv",
+    "cve_ids": [
+      "CVE-2021-44420"
+    ],
+    "summary": "Potential bypass of an upstream access control based on URL paths in Django",
+    "cvss_score": 7.3,
+    "epss_score": 0.02295,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.3, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-6w2r-r2m5-xq5w",
+    "cve_ids": [
+      "CVE-2025-57833"
+    ],
+    "summary": "Django is subject to SQL injection through its column aliases",
+    "cvss_score": 7.1,
+    "epss_score": 0.15602,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.1, EPSS 16%, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-f5g8-5qq7-938w",
+    "cve_ids": [
+      "CVE-2020-35653"
+    ],
+    "summary": "Pillow Out-of-bounds Read",
+    "cvss_score": 7.1,
+    "epss_score": 0.01498,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.1, direct dependency"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-44wm-f244-xhp3",
+    "cve_ids": [
+      "CVE-2024-28219"
+    ],
+    "summary": "Pillow buffer overflow vulnerability",
+    "cvss_score": 6.7,
+    "epss_score": 0.00989,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 6.7, low predicted exploitation"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-9hx2-hgq2-2g4f",
+    "cve_ids": [
+      "CVE-2021-25292"
+    ],
+    "summary": "Regular Expression Denial of Service (ReDoS) in Pillow",
+    "cvss_score": 6.5,
+    "epss_score": 0.01635,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 6.5, low predicted exploitation"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-fj7v-r99m-22gq",
+    "cve_ids": [
+      "CVE-2026-59198"
+    ],
+    "summary": "Pillow TGA RLE encoder can serialize up to ~57 KB of adjacent heap data into generated images",
+    "cvss_score": 6.5,
+    "epss_score": 0.00313,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 6.5, low predicted exploitation"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-pw3c-h7wp-cvhx",
+    "cve_ids": [
+      "CVE-2022-22815"
+    ],
+    "summary": "Improper Initialization in Pillow",
+    "cvss_score": 6.5,
+    "epss_score": 0.02556,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 6.5, low predicted exploitation"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-xrcv-f9gm-v42c",
+    "cve_ids": [
+      "CVE-2022-22816"
+    ],
+    "summary": "Out-of-bounds Read in Pillow",
+    "cvss_score": 6.5,
+    "epss_score": 0.01957,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 6.5, low predicted exploitation"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-95rw-fx8r-36v6",
+    "cve_ids": [
+      "CVE-2022-22818"
+    ],
+    "summary": "Cross-site Scripting in Django",
+    "cvss_score": 6.1,
+    "epss_score": 0.03328,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 6.1, low predicted exploitation"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-qm57-vhq3-3fwf",
+    "cve_ids": [
+      "CVE-2021-32052"
+    ],
+    "summary": "Header injection possible in Django",
+    "cvss_score": 6.1,
+    "epss_score": 0.03146,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 6.1, low predicted exploitation"
+  },
+  {
+    "package": "requests",
+    "version": "2.19.1",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-j8r2-6x86-q33q",
+    "cve_ids": [
+      "CVE-2023-32681"
+    ],
+    "summary": "Unintended leak of Proxy-Authorization header in requests",
+    "cvss_score": 6.1,
+    "epss_score": 0.02974,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 6.1, low predicted exploitation"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-h8gc-pgj2-vjm3",
+    "cve_ids": [
+      "CVE-2023-43665"
+    ],
+    "summary": "Django Denial-of-service in django.utils.text.Truncator",
+    "cvss_score": 5.9,
+    "epss_score": 0.01225,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.9, low predicted exploitation"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-xxj9-f6rv-m3x4",
+    "cve_ids": [
+      "CVE-2024-24680"
+    ],
+    "summary": "Django denial-of-service attack in the intcomma template filter",
+    "cvss_score": 5.9,
+    "epss_score": 0.01606,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.9, low predicted exploitation"
+  },
+  {
+    "package": "requests",
+    "version": "2.19.1",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-9wx4-h78v-vm56",
+    "cve_ids": [
+      "CVE-2024-35195"
+    ],
+    "summary": "Requests `Session` object does not verify requests after making first request with verify=False",
+    "cvss_score": 5.6,
+    "epss_score": 0.0034,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.6, low predicted exploitation"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-g6rj-rv7j-xwp4",
+    "cve_ids": [
+      "CVE-2021-28675"
+    ],
+    "summary": "Pillow denial of service",
+    "cvss_score": 5.5,
+    "epss_score": 0.0096,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.5, low predicted exploitation"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-hjfx-8p6c-g7gx",
+    "cve_ids": [
+      "CVE-2021-28678"
+    ],
+    "summary": "Insufficient Verification of Data Authenticity in Pillow",
+    "cvss_score": 5.5,
+    "epss_score": 0.00732,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.5, low predicted exploitation"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-r73j-pqj5-w3x7",
+    "cve_ids": [
+      "CVE-2026-42310"
+    ],
+    "summary": "Pillow has a PDF Parsing Trailer Infinite Loop (DoS)",
+    "cvss_score": 5.5,
+    "epss_score": 0.00126,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.5, low predicted exploitation"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-wjx4-4jcj-g98j",
+    "cve_ids": [
+      "CVE-2026-42308"
+    ],
+    "summary": "Pillow has an integer overflow when processing fonts",
+    "cvss_score": 5.5,
+    "epss_score": 0.00114,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.5, low predicted exploitation"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-hf64-x4gq-p99h",
+    "cve_ids": [
+      "CVE-2020-35655"
+    ],
+    "summary": "Pillow Out-of-bounds Read",
+    "cvss_score": 5.4,
+    "epss_score": 0.01573,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.4, low predicted exploitation"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-7h4p-27mh-hmrw",
+    "cve_ids": [
+      "CVE-2023-41164"
+    ],
+    "summary": "Django Denial of service vulnerability in django.utils.encoding.uri_to_iri",
+    "cvss_score": 5.3,
+    "epss_score": 0.01273,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.3, low predicted exploitation"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-jrh2-hc4r-7jwx",
+    "cve_ids": [
+      "CVE-2021-45452"
+    ],
+    "summary": "Directory-traversal in Django",
+    "cvss_score": 5.3,
+    "epss_score": 0.02388,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.3, low predicted exploitation"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-vm8q-m57g-pff3",
+    "cve_ids": [
+      "CVE-2024-27351"
+    ],
+    "summary": "Regular expression denial-of-service in Django",
+    "cvss_score": 5.3,
+    "epss_score": 0.01854,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.3, low predicted exploitation"
+  },
+  {
+    "package": "requests",
+    "version": "2.19.1",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-9hjg-9r4m-mvj7",
+    "cve_ids": [
+      "CVE-2024-47081"
+    ],
+    "summary": "Requests vulnerable to .netrc credentials leak via malicious URLs",
+    "cvss_score": 5.3,
+    "epss_score": 0.00845,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.3, low predicted exploitation"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-68w8-qjq3-2gfm",
+    "cve_ids": [
+      "CVE-2021-33203"
+    ],
+    "summary": "Path Traversal in Django",
+    "cvss_score": 4.9,
+    "epss_score": 0.02737,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 4.9, low predicted exploitation"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-4x4j-2g7c-83w6",
+    "cve_ids": [
+      "CVE-2026-55798"
+    ],
+    "summary": "Pillow: WindowsViewer.get_command() OS command injection via unescaped shell path",
+    "cvss_score": 4.5,
+    "epss_score": 0.00177,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 4.5, low predicted exploitation"
+  },
+  {
+    "package": "requests",
+    "version": "2.19.1",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-gc5v-m9x4-r6x2",
+    "cve_ids": [
+      "CVE-2026-25645"
+    ],
+    "summary": "Requests has Insecure Temp File Reuse in its extract_zipped_paths() utility function",
+    "cvss_score": 4.4,
+    "epss_score": 0.00182,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 4.4, low predicted exploitation"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-7xr5-9hcq-chf9",
+    "cve_ids": [
+      "CVE-2025-48432"
+    ],
+    "summary": "Django Improper Output Neutralization for Logs vulnerability",
+    "cvss_score": 4.0,
+    "epss_score": 0.00629,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 4.0, low predicted exploitation"
+  },
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-rrqc-c2jx-6jgv",
+    "cve_ids": [
+      "CVE-2024-45231"
+    ],
+    "summary": "Django allows enumeration of user e-mail addresses",
+    "cvss_score": 3.7,
+    "epss_score": 0.00781,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 3.7, low predicted exploitation"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-4fx9-vc88-q2xc",
+    "cve_ids": [],
+    "summary": "Infinite loop in Pillow",
+    "cvss_score": null,
+    "epss_score": null,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS unknown, low predicted exploitation"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-62p4-gmf7-7g93",
+    "cve_ids": [
+      "CVE-2026-54058"
+    ],
+    "summary": "Pillow: Out-of-bounds read via attacker-controlled row stride on Pillow's mmap path (McIdas AREA files)",
+    "cvss_score": null,
+    "epss_score": 0.00384,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS unknown, low predicted exploitation"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "PYSEC-2022-42980",
+    "cve_ids": [
+      "CVE-2022-45199"
+    ],
+    "summary": "(no summary available)",
+    "cvss_score": null,
+    "epss_score": 0.01102,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS unknown, low predicted exploitation"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "PYSEC-2023-175",
+    "cve_ids": [],
+    "summary": "(no summary available)",
+    "cvss_score": null,
+    "epss_score": null,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS unknown, low predicted exploitation"
+  },
+  {
+    "package": "flask",
+    "version": "0.12.2",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-68rp-wp8r-4726",
+    "cve_ids": [
+      "CVE-2026-27205"
+    ],
+    "summary": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
+    "cvss_score": null,
+    "epss_score": 0.00344,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS unknown, low predicted exploitation"
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "fail_on": "HIGH",
+  "sbom_output": "sbom.json",
+  "report_output": "report.json"
+}

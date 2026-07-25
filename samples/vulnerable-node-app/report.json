@@ -1,0 +1,100 @@
+[
+  {
+    "package": "minimist",
+    "version": "1.2.0",
+    "ecosystem": "npm",
+    "direct": true,
+    "vuln_id": "GHSA-xvch-5gv4-984h",
+    "cve_ids": [
+      "CVE-2021-44906"
+    ],
+    "summary": "Prototype Pollution in minimist",
+    "cvss_score": 9.8,
+    "epss_score": 0.04581,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 9.8, direct dependency"
+  },
+  {
+    "package": "lodash",
+    "version": "4.17.15",
+    "ecosystem": "npm",
+    "direct": true,
+    "vuln_id": "GHSA-p6mc-m468-83gw",
+    "cve_ids": [
+      "CVE-2020-8203"
+    ],
+    "summary": "Prototype Pollution in lodash",
+    "cvss_score": 7.4,
+    "epss_score": 0.05213,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.4, direct dependency"
+  },
+  {
+    "package": "lodash",
+    "version": "4.17.15",
+    "ecosystem": "npm",
+    "direct": true,
+    "vuln_id": "GHSA-35jh-r3h4-6jhm",
+    "cve_ids": [
+      "CVE-2021-23337",
+      "CVE-2026-4800"
+    ],
+    "summary": "Command Injection in lodash",
+    "cvss_score": 7.2,
+    "epss_score": 0.21333,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.2, EPSS 21%, direct dependency"
+  },
+  {
+    "package": "lodash",
+    "version": "4.17.15",
+    "ecosystem": "npm",
+    "direct": true,
+    "vuln_id": "GHSA-f23m-r3pf-42rh",
+    "cve_ids": [
+      "CVE-2025-13465",
+      "CVE-2026-2950"
+    ],
+    "summary": "lodash vulnerable to Prototype Pollution via array path bypass in `_.unset` and `_.omit`",
+    "cvss_score": 6.5,
+    "epss_score": 0.01535,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 6.5, low predicted exploitation"
+  },
+  {
+    "package": "minimist",
+    "version": "1.2.0",
+    "ecosystem": "npm",
+    "direct": true,
+    "vuln_id": "GHSA-vh95-rmgr-6w4m",
+    "cve_ids": [
+      "CVE-2020-7598"
+    ],
+    "summary": "Prototype Pollution in minimist",
+    "cvss_score": 5.6,
+    "epss_score": 0.01884,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.6, low predicted exploitation"
+  },
+  {
+    "package": "lodash",
+    "version": "4.17.15",
+    "ecosystem": "npm",
+    "direct": true,
+    "vuln_id": "GHSA-29mw-wpgm-hmr9",
+    "cve_ids": [
+      "CVE-2020-28500"
+    ],
+    "summary": "Regular Expression Denial of Service (ReDoS) in lodash",
+    "cvss_score": 5.3,
+    "epss_score": 0.07336,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.3, low predicted exploitation"
+  }
+]

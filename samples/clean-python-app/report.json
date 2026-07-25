@@ -1,0 +1,226 @@
+[
+  {
+    "package": "django",
+    "version": "5.1.4",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-frmv-pr5f-9mcr",
+    "cve_ids": [
+      "CVE-2025-64459"
+    ],
+    "summary": "Django vulnerable to SQL injection via _connector keyword argument in QuerySet and Q objects.",
+    "cvss_score": 9.1,
+    "epss_score": 0.19396,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 9.1, EPSS 19%, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "5.1.4",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-qw25-v68c-qjf3",
+    "cve_ids": [
+      "CVE-2025-64458"
+    ],
+    "summary": "Django has a denial-of-service vulnerability in HttpResponseRedirect and HttpResponsePermanentRedirect on Windows",
+    "cvss_score": 7.5,
+    "epss_score": 0.0193,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "5.1.4",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-6w2r-r2m5-xq5w",
+    "cve_ids": [
+      "CVE-2025-57833"
+    ],
+    "summary": "Django is subject to SQL injection through its column aliases",
+    "cvss_score": 7.1,
+    "epss_score": 0.15602,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.1, EPSS 16%, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "5.1.4",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-hpr9-3m2g-3j9p",
+    "cve_ids": [
+      "CVE-2025-59681"
+    ],
+    "summary": "Django vulnerable to SQL injection in column aliases",
+    "cvss_score": 7.1,
+    "epss_score": 0.00583,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.1, direct dependency"
+  },
+  {
+    "package": "django",
+    "version": "5.1.4",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-8j24-cjrq-gr2m",
+    "cve_ids": [
+      "CVE-2025-32873"
+    ],
+    "summary": "Django has a denial-of-service possibility in strip_tags()",
+    "cvss_score": 5.3,
+    "epss_score": 0.14243,
+    "in_kev": false,
+    "tier": "MEDIUM",
+    "reason": "CVSS 5.3, meaningful predicted exploitation (EPSS 14%)"
+  },
+  {
+    "package": "django",
+    "version": "5.1.4",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-qcgg-j2x8-h9g8",
+    "cve_ids": [
+      "CVE-2024-56374"
+    ],
+    "summary": "Django has a potential denial-of-service vulnerability in IPv6 validation",
+    "cvss_score": 5.8,
+    "epss_score": 0.01886,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.8, low predicted exploitation"
+  },
+  {
+    "package": "django",
+    "version": "5.1.4",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-wqfg-m96j-85vm",
+    "cve_ids": [
+      "CVE-2025-27556"
+    ],
+    "summary": "Django Potential Denial of Service (DoS) on Windows ",
+    "cvss_score": 5.8,
+    "epss_score": 0.00997,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.8, low predicted exploitation"
+  },
+  {
+    "package": "requests",
+    "version": "2.32.3",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-9hjg-9r4m-mvj7",
+    "cve_ids": [
+      "CVE-2024-47081"
+    ],
+    "summary": "Requests vulnerable to .netrc credentials leak via malicious URLs",
+    "cvss_score": 5.3,
+    "epss_score": 0.00845,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.3, low predicted exploitation"
+  },
+  {
+    "package": "django",
+    "version": "5.1.4",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-p3fp-8748-vqfq",
+    "cve_ids": [
+      "CVE-2025-26699"
+    ],
+    "summary": "Django vulnerable to Allocation of Resources Without Limits or Throttling",
+    "cvss_score": 5.0,
+    "epss_score": 0.00766,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.0, low predicted exploitation"
+  },
+  {
+    "package": "requests",
+    "version": "2.32.3",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-gc5v-m9x4-r6x2",
+    "cve_ids": [
+      "CVE-2026-25645"
+    ],
+    "summary": "Requests has Insecure Temp File Reuse in its extract_zipped_paths() utility function",
+    "cvss_score": 4.4,
+    "epss_score": 0.00182,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 4.4, low predicted exploitation"
+  },
+  {
+    "package": "django",
+    "version": "5.1.4",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-rqw2-ghq9-44m7",
+    "cve_ids": [
+      "CVE-2025-13372"
+    ],
+    "summary": "Django is vulnerable to SQL injection in column aliases",
+    "cvss_score": 4.3,
+    "epss_score": 0.00924,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 4.3, low predicted exploitation"
+  },
+  {
+    "package": "django",
+    "version": "5.1.4",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-7xr5-9hcq-chf9",
+    "cve_ids": [
+      "CVE-2025-48432"
+    ],
+    "summary": "Django Improper Output Neutralization for Logs vulnerability",
+    "cvss_score": 4.0,
+    "epss_score": 0.00629,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 4.0, low predicted exploitation"
+  },
+  {
+    "package": "django",
+    "version": "5.1.4",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-q95w-c7qg-hrff",
+    "cve_ids": [
+      "CVE-2025-59682"
+    ],
+    "summary": "Django vulnerable to partial directory traversal via archives",
+    "cvss_score": 3.1,
+    "epss_score": 0.0085,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 3.1, low predicted exploitation"
+  },
+  {
+    "package": "django",
+    "version": "5.1.4",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-vrcr-9hj9-jcg6",
+    "cve_ids": [
+      "CVE-2025-64460"
+    ],
+    "summary": "Django is vulnerable to DoS via XML serializer text extraction",
+    "cvss_score": null,
+    "epss_score": 0.0219,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS unknown, low predicted exploitation"
+  }
+]
