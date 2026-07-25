@@ -3,6 +3,7 @@
 import json
 from pathlib import Path
 
+from license_check import LicenseFinding
 from risk_engine import Finding
 
 _TIER_ORDER = ["CRITICAL", "HIGH", "MEDIUM", "LOW"]
@@ -62,3 +63,34 @@ def worst_tier_present(findings: list[Finding]) -> str | None:
         if any(f.tier == tier for f in findings):
             return tier
     return None
+
+
+def print_license_report(license_findings: list[LicenseFinding]) -> None:
+    copyleft = [f for f in license_findings if f.category == "copyleft"]
+    permissive = sum(1 for f in license_findings if f.category == "permissive")
+    unknown = sum(1 for f in license_findings if f.category == "unknown")
+
+    print("\n--- License Risk ---")
+    if copyleft:
+        print(f"{len(copyleft)} copyleft-licensed dependency(ies) - a legal/compliance "
+              f"concern separate from security risk:")
+        for f in copyleft:
+            print(f"  {f.dependency.name}@{f.dependency.version} "
+                  f"({f.dependency.ecosystem}) - {f.license_text}")
+    else:
+        print("No copyleft-licensed dependencies found.")
+    print(f"({permissive} permissive, {unknown} unknown/unresolved)")
+
+
+def write_license_json(license_findings: list[LicenseFinding], path: Path) -> None:
+    data = [
+        {
+            "package": f.dependency.name,
+            "version": f.dependency.version,
+            "ecosystem": f.dependency.ecosystem,
+            "license": f.license_text,
+            "category": f.category,
+        }
+        for f in license_findings
+    ]
+    path.write_text(json.dumps(data, indent=2), encoding="utf-8")

@@ -14,9 +14,13 @@ from pathlib import Path
 from manifest_parser import parse_manifests
 from osv_client import query_batch, get_vuln_details
 from enrichment import get_epss_scores, get_kev_cve_ids
+from license_check import check_licenses
 from risk_engine import build_findings
 from sbom import build_sbom
-from report import print_console_report, write_json_report, worst_tier_present
+from report import (
+    print_console_report, write_json_report, worst_tier_present,
+    print_license_report, write_license_json,
+)
 
 _TIER_ORDER = ["CRITICAL", "HIGH", "MEDIUM", "LOW"]
 
@@ -24,7 +28,12 @@ _TIER_ORDER = ["CRITICAL", "HIGH", "MEDIUM", "LOW"]
 def load_policy(config_path: Path) -> dict:
     if config_path.exists():
         return json.loads(config_path.read_text(encoding="utf-8"))
-    return {"fail_on": "HIGH", "sbom_output": "sbom.json", "report_output": "report.json"}
+    return {
+        "fail_on": "HIGH",
+        "sbom_output": "sbom.json",
+        "report_output": "report.json",
+        "license_output": "licenses.json",
+    }
 
 
 def run(project_dir: Path, policy: dict) -> int:
@@ -61,6 +70,14 @@ def run(project_dir: Path, policy: dict) -> int:
         findings = build_findings(vulns_by_dep, vuln_details, epss_scores, kev_ids)
 
     print_console_report(findings)
+
+    print("[SupplyChainX] Checking dependency licenses ...")
+    license_findings = check_licenses(deps)
+    print_license_report(license_findings)
+
+    license_path = project_dir / policy.get("license_output", "licenses.json")
+    write_license_json(license_findings, license_path)
+    print(f"[SupplyChainX] License report written to {license_path}")
 
     sbom_path = project_dir / policy.get("sbom_output", "sbom.json")
     sbom_path.write_text(json.dumps(build_sbom(deps, project_dir.name), indent=2), encoding="utf-8")

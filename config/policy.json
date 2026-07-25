@@ -1,5 +1,6 @@
 {
   "fail_on": "HIGH",
   "sbom_output": "sbom.json",
-  "report_output": "report.json"
+  "report_output": "report.json",
+  "license_output": "licenses.json"
 }

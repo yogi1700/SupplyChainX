@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.5",
-  "serialNumber": "urn:uuid:a17f050f-8fc4-4e28-87fc-e9e7cbc01a61",
+  "serialNumber": "urn:uuid:07c8586e-ef45-4e28-90ca-943a202a3583",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-07-25T04:54:19.687953+00:00",
+    "timestamp": "2026-07-25T05:29:38.752410+00:00",
     "component": {
       "type": "application",
       "name": "vulnerable-node-app"

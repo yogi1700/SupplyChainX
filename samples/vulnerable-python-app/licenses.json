@@ -1,0 +1,37 @@
+[
+  {
+    "package": "django",
+    "version": "3.2.0",
+    "ecosystem": "PyPI",
+    "license": "BSD License",
+    "category": "permissive"
+  },
+  {
+    "package": "pyyaml",
+    "version": "5.3.1",
+    "ecosystem": "PyPI",
+    "license": "MIT License",
+    "category": "permissive"
+  },
+  {
+    "package": "requests",
+    "version": "2.19.1",
+    "ecosystem": "PyPI",
+    "license": "Apache Software License",
+    "category": "permissive"
+  },
+  {
+    "package": "pillow",
+    "version": "8.0.0",
+    "ecosystem": "PyPI",
+    "license": "Historical Permission Notice and Disclaimer (HPND)",
+    "category": "permissive"
+  },
+  {
+    "package": "flask",
+    "version": "0.12.2",
+    "ecosystem": "PyPI",
+    "license": "BSD License",
+    "category": "permissive"
+  }
+]

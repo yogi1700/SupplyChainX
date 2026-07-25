@@ -13,6 +13,7 @@ The reason I built it this way: running a raw vulnerability scanner against any 
 - Combines all of that into a prioritized CRITICAL/HIGH/MEDIUM/LOW list, where every finding says exactly *why* it landed in that tier
 - Generates a CycloneDX SBOM (the standard format most SBOM/vulnerability-management tooling expects)
 - Can fail a CI build if anything crosses a configurable policy threshold
+- Separately flags copyleft-licensed dependencies (GPL, AGPL, LGPL) - a real legal/compliance risk that has nothing to do with CVEs, and gets missed if a scanner only looks at vulnerabilities
 
 ## How it's put together
 
@@ -46,6 +47,7 @@ SupplyChainX/
 │   ├── cvss.py              computes real CVSS v3.1 base scores from vector strings
 │   ├── osv_client.py        queries OSV.dev for known vulnerabilities
 │   ├── enrichment.py        EPSS + CISA KEV lookups
+│   ├── license_check.py     flags copyleft-licensed dependencies
 │   ├── risk_engine.py       the actual prioritization logic
 │   ├── sbom.py               CycloneDX SBOM generation
 │   ├── report.py             console + JSON reporting
@@ -91,6 +93,17 @@ That's the actual point of this tool: 85 known issues in that dependency set, bu
 
 **The CI-gate logic actually gates.** Running the same Python project against a policy of `fail_on: HIGH` exits with code 1. Running it again against `fail_on: CRITICAL` on identical data exits 0 - only the one KEV-confirmed finding would have blocked a build under a stricter policy, and everything else is left for normal triage rather than blocking anyone's merge.
 
+**A project pinning `pyqt5==5.15.9`** (genuinely GPL v3-licensed, not a hypothetical) correctly got flagged separately from the vulnerability findings:
+
+```
+--- License Risk ---
+1 copyleft-licensed dependency(ies) - a legal/compliance concern separate from security risk:
+  pyqt5@5.15.9 (PyPI) - GPL v3
+(1 permissive, 0 unknown/unresolved)
+```
+
+That's a real, non-hypothetical example - PyQt5 is dual-licensed (GPL v3 or a paid commercial license), which is exactly the kind of thing that's a genuine problem in a proprietary codebase and invisible to a scanner that only checks for CVEs.
+
 A couple of things worth noting from actually building this:
 
 - OSV's batch endpoint only returns vulnerability IDs, not details - fetching full details for the ~160 unique vulnerabilities one at a time took over two minutes. Since those are independent HTTP calls, fetching them concurrently (20 workers) brought that down to about 34 seconds.
@@ -101,7 +114,6 @@ A couple of things worth noting from actually building this:
 
 - Support for more ecosystems (Go modules, Maven/Gradle)
 - A way to suppress/accept specific findings with a documented reason, instead of them reappearing on every scan
-- License risk (some transitive dependencies carry licenses that are a real legal/compliance concern, separate from security risk)
 - Caching OSV/EPSS lookups locally so re-scanning an unchanged dependency tree doesn't re-hit every API
 
 ## What this reinforced for me

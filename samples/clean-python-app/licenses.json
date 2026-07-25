@@ -1,0 +1,23 @@
+[
+  {
+    "package": "django",
+    "version": "5.1.4",
+    "ecosystem": "PyPI",
+    "license": "BSD License",
+    "category": "permissive"
+  },
+  {
+    "package": "requests",
+    "version": "2.32.3",
+    "ecosystem": "PyPI",
+    "license": "Apache Software License",
+    "category": "permissive"
+  },
+  {
+    "package": "pyyaml",
+    "version": "6.0.2",
+    "ecosystem": "PyPI",
+    "license": "MIT License",
+    "category": "permissive"
+  }
+]

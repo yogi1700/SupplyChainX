@@ -1,0 +1,16 @@
+[
+  {
+    "package": "pyqt5",
+    "version": "5.15.9",
+    "ecosystem": "PyPI",
+    "license": "GPL v3",
+    "category": "copyleft"
+  },
+  {
+    "package": "requests",
+    "version": "2.32.3",
+    "ecosystem": "PyPI",
+    "license": "Apache Software License",
+    "category": "permissive"
+  }
+]

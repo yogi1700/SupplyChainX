@@ -1,0 +1,29 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:00b24d28-faa0-4ac9-afb8-3bc27cccd32a",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-07-25T05:29:24.655882+00:00",
+    "component": {
+      "type": "application",
+      "name": "copyleft-python-app"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "pyqt5",
+      "version": "5.15.9",
+      "purl": "pkg:pypi/pyqt5@5.15.9",
+      "scope": "required"
+    },
+    {
+      "type": "library",
+      "name": "requests",
+      "version": "2.32.3",
+      "purl": "pkg:pypi/requests@2.32.3",
+      "scope": "required"
+    }
+  ]
+}

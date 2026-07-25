@@ -1,0 +1,16 @@
+[
+  {
+    "package": "lodash",
+    "version": "4.17.15",
+    "ecosystem": "npm",
+    "license": "MIT",
+    "category": "permissive"
+  },
+  {
+    "package": "minimist",
+    "version": "1.2.0",
+    "ecosystem": "npm",
+    "license": "MIT",
+    "category": "permissive"
+  }
+]
