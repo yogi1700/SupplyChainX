@@ -70,7 +70,7 @@ pip install -r requirements.txt
 python src/cli.py /path/to/some/project --config config/policy.json
 ```
 
-It writes `sbom.json` and `report.json` into the scanned project's directory, prints a prioritized summary to the console, and exits non-zero if anything crosses the policy threshold in `config/policy.json`.
+It writes `sbom.json`, `report.json`, and `licenses.json` into the scanned project's directory, prints a prioritized vulnerability summary plus a separate license-risk summary to the console, and exits non-zero if anything crosses the policy threshold in `config/policy.json` (license findings don't affect that exit code - they're a separate, non-CI-blocking concern for now).
 
 ## Testing it against real vulnerable projects
 
