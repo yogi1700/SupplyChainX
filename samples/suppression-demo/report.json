@@ -1,0 +1,92 @@
+[
+  {
+    "package": "requests",
+    "version": "2.19.1",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-x84v-xcm2-53pg",
+    "cve_ids": [
+      "CVE-2018-18074"
+    ],
+    "summary": "Insufficiently Protected Credentials in Requests",
+    "cvss_score": 7.5,
+    "epss_score": 0.07443,
+    "in_kev": false,
+    "tier": "HIGH",
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": true,
+    "suppression_reason": "Vulnerable code path (Authorization header leak on cross-domain redirect) is unreachable here - this service never issues cross-domain redirected requests. Tracked for upgrade in next dependency refresh."
+  },
+  {
+    "package": "requests",
+    "version": "2.19.1",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-j8r2-6x86-q33q",
+    "cve_ids": [
+      "CVE-2023-32681"
+    ],
+    "summary": "Unintended leak of Proxy-Authorization header in requests",
+    "cvss_score": 6.1,
+    "epss_score": 0.02974,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 6.1, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
+  },
+  {
+    "package": "requests",
+    "version": "2.19.1",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-9wx4-h78v-vm56",
+    "cve_ids": [
+      "CVE-2024-35195"
+    ],
+    "summary": "Requests `Session` object does not verify requests after making first request with verify=False",
+    "cvss_score": 5.6,
+    "epss_score": 0.0034,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.6, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
+  },
+  {
+    "package": "requests",
+    "version": "2.19.1",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-9hjg-9r4m-mvj7",
+    "cve_ids": [
+      "CVE-2024-47081"
+    ],
+    "summary": "Requests vulnerable to .netrc credentials leak via malicious URLs",
+    "cvss_score": 5.3,
+    "epss_score": 0.00845,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 5.3, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
+  },
+  {
+    "package": "requests",
+    "version": "2.19.1",
+    "ecosystem": "PyPI",
+    "direct": true,
+    "vuln_id": "GHSA-gc5v-m9x4-r6x2",
+    "cve_ids": [
+      "CVE-2026-25645"
+    ],
+    "summary": "Requests has Insecure Temp File Reuse in its extract_zipped_paths() utility function",
+    "cvss_score": 4.4,
+    "epss_score": 0.00182,
+    "in_kev": false,
+    "tier": "LOW",
+    "reason": "CVSS 4.4, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
+  }
+]

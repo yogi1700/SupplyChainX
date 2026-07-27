@@ -1,0 +1,8 @@
+[
+  {
+    "cve_id": "CVE-2018-18074",
+    "package": "requests",
+    "reason": "Vulnerable code path (Authorization header leak on cross-domain redirect) is unreachable here - this service never issues cross-domain redirected requests. Tracked for upgrade in next dependency refresh.",
+    "expires": "2026-12-31"
+  }
+]

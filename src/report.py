@@ -10,17 +10,22 @@ _TIER_ORDER = ["CRITICAL", "HIGH", "MEDIUM", "LOW"]
 
 
 def print_console_report(findings: list[Finding]) -> None:
+    active = [f for f in findings if not f.suppressed]
+    suppressed_count = len(findings) - len(active)
+
     counts = {tier: 0 for tier in _TIER_ORDER}
-    for f in findings:
+    for f in active:
         counts[f.tier] += 1
 
     print("\n--- SupplyChainX Risk Report ---")
     print(f"Total findings: {len(findings)}  "
           f"(CRITICAL={counts['CRITICAL']} HIGH={counts['HIGH']} "
-          f"MEDIUM={counts['MEDIUM']} LOW={counts['LOW']})\n")
+          f"MEDIUM={counts['MEDIUM']} LOW={counts['LOW']})"
+          + (f"  [{suppressed_count} suppressed, excluded from the counts above]"
+             if suppressed_count else "") + "\n")
 
     for tier in ("CRITICAL", "HIGH"):
-        tier_findings = [f for f in findings if f.tier == tier]
+        tier_findings = [f for f in active if f.tier == tier]
         if not tier_findings:
             continue
         print(f"[{tier}]")
@@ -52,6 +57,8 @@ def write_json_report(findings: list[Finding], path: Path) -> None:
             "in_kev": f.in_kev,
             "tier": f.tier,
             "reason": f.reason,
+            "suppressed": f.suppressed,
+            "suppression_reason": f.suppression_reason,
         }
         for f in findings
     ]
@@ -59,8 +66,12 @@ def write_json_report(findings: list[Finding], path: Path) -> None:
 
 
 def worst_tier_present(findings: list[Finding]) -> str | None:
+    """Only considers non-suppressed findings - a suppression is a
+    documented decision to exclude something from the CI-gate, not a
+    way to hide it (it still shows up in the full JSON report)."""
+    active = [f for f in findings if not f.suppressed]
     for tier in _TIER_ORDER:
-        if any(f.tier == tier for f in findings):
+        if any(f.tier == tier for f in active):
             return tier
     return None
 

@@ -15,7 +15,8 @@ from manifest_parser import parse_manifests
 from osv_client import query_batch, get_vuln_details
 from enrichment import get_epss_scores, get_kev_cve_ids
 from license_check import check_licenses
-from risk_engine import build_findings
+from risk_engine import build_findings, apply_suppressions
+from suppressions import load_suppressions
 from sbom import build_sbom
 from report import (
     print_console_report, write_json_report, worst_tier_present,
@@ -36,7 +37,7 @@ def load_policy(config_path: Path) -> dict:
     }
 
 
-def run(project_dir: Path, policy: dict) -> int:
+def run(project_dir: Path, policy: dict, suppressions_path: Path | None = None) -> int:
     print(f"[SupplyChainX] Scanning {project_dir} ...")
 
     deps = parse_manifests(project_dir)
@@ -68,6 +69,12 @@ def run(project_dir: Path, policy: dict) -> int:
         kev_ids = get_kev_cve_ids()
 
         findings = build_findings(vulns_by_dep, vuln_details, epss_scores, kev_ids)
+
+    if suppressions_path:
+        suppressions = load_suppressions(suppressions_path)
+        if suppressions:
+            print(f"[SupplyChainX] Loaded {len(suppressions)} suppression(s) from {suppressions_path}")
+            findings = apply_suppressions(findings, suppressions)
 
     print_console_report(findings)
 
@@ -101,7 +108,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Scan project dependencies for real, prioritized risk.")
     parser.add_argument("project_dir", type=Path)
     parser.add_argument("--config", type=Path, default=Path("config/policy.json"))
+    parser.add_argument("--suppressions", type=Path, default=Path("config/suppressions.json"))
     args = parser.parse_args()
 
-    exit_code = run(args.project_dir, load_policy(args.config))
+    exit_code = run(args.project_dir, load_policy(args.config), args.suppressions)
     sys.exit(exit_code)

@@ -39,6 +39,8 @@ class Finding:
     in_kev: bool
     tier: str = field(init=False)
     reason: str = field(init=False)
+    suppressed: bool = False
+    suppression_reason: str | None = None
 
     def __post_init__(self):
         self.tier, self.reason = self._classify()
@@ -116,4 +118,20 @@ def build_findings(
 
     findings = list(candidates.values())
     findings.sort(key=lambda f: (_TIER_ORDER[f.tier], -(f.cvss_score or 0)))
+    return findings
+
+
+def apply_suppressions(findings: list[Finding], suppressions: list) -> list[Finding]:
+    """Marks findings that match an active suppression. Suppressed
+    findings stay in the list (visible in the full report) but are
+    flagged so the CI-gate decision can skip them - suppression is a
+    documented, auditable exception, not deletion."""
+    from suppressions import is_suppressed
+
+    for finding in findings:
+        match = is_suppressed(finding.cve_ids, finding.dependency.name, suppressions)
+        if match:
+            finding.suppressed = True
+            finding.suppression_reason = match.reason
+
     return findings

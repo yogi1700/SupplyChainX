@@ -1,0 +1,9 @@
+[
+  {
+    "package": "requests",
+    "version": "2.19.1",
+    "ecosystem": "PyPI",
+    "license": "Apache Software License",
+    "category": "permissive"
+  }
+]

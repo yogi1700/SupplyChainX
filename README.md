@@ -14,6 +14,7 @@ The reason I built it this way: running a raw vulnerability scanner against any 
 - Generates a CycloneDX SBOM (the standard format most SBOM/vulnerability-management tooling expects)
 - Can fail a CI build if anything crosses a configurable policy threshold
 - Separately flags copyleft-licensed dependencies (GPL, AGPL, LGPL) - a real legal/compliance risk that has nothing to do with CVEs, and gets missed if a scanner only looks at vulnerabilities
+- Supports suppressing a specific finding with a documented reason and optional expiry date - an accepted risk stops blocking CI but stays visible in the full report, rather than either blocking every build forever or silently disappearing
 
 ## How it's put together
 
@@ -33,9 +34,12 @@ flowchart TD
     J --> K
     K --> L[Console + JSON report]
     B --> M[CycloneDX SBOM]
-    K --> N{Above policy threshold?}
+    K --> S{Matches an active suppression?}
+    S -- yes --> T[Tagged suppressed, kept in report, excluded from gate]
+    S -- no --> N{Above policy threshold?}
     N -- yes --> O[Exit 1 - fail the build]
     N -- no --> P[Exit 0 - pass]
+    T --> P
 ```
 
 ## Project layout
@@ -48,14 +52,17 @@ SupplyChainX/
 │   ├── osv_client.py        queries OSV.dev for known vulnerabilities
 │   ├── enrichment.py        EPSS + CISA KEV lookups
 │   ├── license_check.py     flags copyleft-licensed dependencies
+│   ├── suppressions.py      accepted-risk waivers with reason + optional expiry
 │   ├── risk_engine.py       the actual prioritization logic
 │   ├── sbom.py               CycloneDX SBOM generation
 │   ├── report.py             console + JSON reporting
 │   └── cli.py                entry point / orchestration
 │
 ├── config/
-│   └── policy.json           what tier fails a CI build
+│   ├── policy.json           what tier fails a CI build
+│   └── suppressions.json     accepted-risk waivers (empty by default)
 │
+├── tests/                    unit tests (pytest)
 ├── samples/                  real test projects with known-vulnerable pinned deps
 ├── .github/workflows/        example CI integration
 └── requirements.txt
@@ -67,10 +74,14 @@ SupplyChainX/
 pip install -r requirements.txt
 
 # scan any project directory with a requirements.txt or package-lock.json
-python src/cli.py /path/to/some/project --config config/policy.json
+python src/cli.py /path/to/some/project --config config/policy.json --suppressions config/suppressions.json
+
+# run the test suite
+pip install -r requirements-dev.txt
+pytest tests/
 ```
 
-It writes `sbom.json`, `report.json`, and `licenses.json` into the scanned project's directory, prints a prioritized vulnerability summary plus a separate license-risk summary to the console, and exits non-zero if anything crosses the policy threshold in `config/policy.json` (license findings don't affect that exit code - they're a separate, non-CI-blocking concern for now).
+It writes `sbom.json`, `report.json`, and `licenses.json` into the scanned project's directory, prints a prioritized vulnerability summary plus a separate license-risk summary to the console, and exits non-zero if anything crosses the policy threshold in `config/policy.json` (license findings don't affect that exit code - they're a separate, non-CI-blocking concern for now). Any finding matching an active entry in `--suppressions` is excluded from that exit-code decision but stays visible in `report.json`, tagged as suppressed with the documented reason.
 
 ## Testing it against real vulnerable projects
 
@@ -104,6 +115,20 @@ That's the actual point of this tool: 85 known issues in that dependency set, bu
 
 That's a real, non-hypothetical example - PyQt5 is dual-licensed (GPL v3 or a paid commercial license), which is exactly the kind of thing that's a genuine problem in a proprietary codebase and invisible to a scanner that only checks for CVEs.
 
+**A project pinning only `requests==2.19.1`** has exactly one HIGH finding (`CVE-2018-18074`), so it's a clean way to prove the suppression mechanism actually changes the CI-gate outcome rather than just existing in theory:
+
+```
+# Without a suppression:
+Total findings: 5  (CRITICAL=0 HIGH=1 MEDIUM=0 LOW=4)
+[SupplyChainX] FAILING: worst finding is HIGH, policy fails on HIGH+
+
+# With config/suppressions.json waiving that one CVE:
+Total findings: 5  (CRITICAL=0 HIGH=0 MEDIUM=0 LOW=4)  [1 suppressed, excluded from the counts above]
+[SupplyChainX] PASSING: nothing at or above policy threshold (HIGH)
+```
+
+The suppressed finding still shows up in the full `report.json`, tagged `"suppressed": true` with the documented reason - it's excluded from the pass/fail decision, not hidden. I also checked the expiry logic actually does something: setting `expires` to a past date makes the same suppression stop matching and the build goes back to failing, which is the point of an expiry - it forces a re-review instead of a waiver silently lasting forever.
+
 A couple of things worth noting from actually building this:
 
 - OSV's batch endpoint only returns vulnerability IDs, not details - fetching full details for the ~160 unique vulnerabilities one at a time took over two minutes. Since those are independent HTTP calls, fetching them concurrently (20 workers) brought that down to about 34 seconds.
@@ -113,7 +138,6 @@ A couple of things worth noting from actually building this:
 ## What's next
 
 - Support for more ecosystems (Go modules, Maven/Gradle)
-- A way to suppress/accept specific findings with a documented reason, instead of them reappearing on every scan
 - Caching OSV/EPSS lookups locally so re-scanning an unchanged dependency tree doesn't re-hit every API
 
 ## What this reinforced for me

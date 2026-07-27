@@ -13,7 +13,9 @@
     "epss_score": 0.00845,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 5.3, low predicted exploitation"
+    "reason": "CVSS 5.3, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "requests",
@@ -29,6 +31,8 @@
     "epss_score": 0.00182,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 4.4, low predicted exploitation"
+    "reason": "CVSS 4.4, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   }
 ]

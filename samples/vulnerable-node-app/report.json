@@ -13,7 +13,9 @@
     "epss_score": 0.04581,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 9.8, direct dependency"
+    "reason": "CVSS 9.8, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "lodash",
@@ -29,7 +31,9 @@
     "epss_score": 0.05213,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.4, direct dependency"
+    "reason": "CVSS 7.4, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "lodash",
@@ -46,7 +50,9 @@
     "epss_score": 0.21333,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.2, EPSS 21%, direct dependency"
+    "reason": "CVSS 7.2, EPSS 21%, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "lodash",
@@ -63,7 +69,9 @@
     "epss_score": 0.01535,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 6.5, low predicted exploitation"
+    "reason": "CVSS 6.5, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "minimist",
@@ -79,7 +87,9 @@
     "epss_score": 0.01884,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 5.6, low predicted exploitation"
+    "reason": "CVSS 5.6, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "lodash",
@@ -95,6 +105,8 @@
     "epss_score": 0.07336,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 5.3, low predicted exploitation"
+    "reason": "CVSS 5.3, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   }
 ]

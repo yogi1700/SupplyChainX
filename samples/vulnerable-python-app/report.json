@@ -14,7 +14,9 @@
     "epss_score": 0.99735,
     "in_kev": true,
     "tier": "CRITICAL",
-    "reason": "confirmed under active exploitation (CISA KEV)"
+    "reason": "confirmed under active exploitation (CISA KEV)",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -27,10 +29,12 @@
     ],
     "summary": "SQL Injection in Django",
     "cvss_score": 9.8,
-    "epss_score": 0.18516,
+    "epss_score": 0.18661,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 9.8, EPSS 19%, direct dependency"
+    "reason": "CVSS 9.8, EPSS 19%, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -46,7 +50,9 @@
     "epss_score": 0.73274,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 9.8, EPSS 73%, direct dependency"
+    "reason": "CVSS 9.8, EPSS 73%, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -62,7 +68,9 @@
     "epss_score": 0.0138,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 9.8, direct dependency"
+    "reason": "CVSS 9.8, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -78,7 +86,9 @@
     "epss_score": 0.02919,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 9.8, direct dependency"
+    "reason": "CVSS 9.8, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -94,7 +104,9 @@
     "epss_score": 0.44369,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 9.8, EPSS 44%, direct dependency"
+    "reason": "CVSS 9.8, EPSS 44%, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pyyaml",
@@ -110,7 +122,9 @@
     "epss_score": 0.05984,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 9.8, direct dependency"
+    "reason": "CVSS 9.8, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -126,7 +140,9 @@
     "epss_score": 0.02281,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 9.8, direct dependency"
+    "reason": "CVSS 9.8, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -142,7 +158,9 @@
     "epss_score": 0.03162,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 9.8, direct dependency"
+    "reason": "CVSS 9.8, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -158,7 +176,9 @@
     "epss_score": 0.03399,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 9.8, direct dependency"
+    "reason": "CVSS 9.8, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -174,7 +194,9 @@
     "epss_score": 0.19396,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 9.1, EPSS 19%, direct dependency"
+    "reason": "CVSS 9.1, EPSS 19%, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -190,7 +212,9 @@
     "epss_score": 0.02876,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 9.1, direct dependency"
+    "reason": "CVSS 9.1, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -206,7 +230,9 @@
     "epss_score": 0.02811,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 9.1, direct dependency"
+    "reason": "CVSS 9.1, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -222,7 +248,9 @@
     "epss_score": 0.02342,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 9.1, direct dependency"
+    "reason": "CVSS 9.1, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -238,7 +266,9 @@
     "epss_score": 0.00657,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 8.8, direct dependency"
+    "reason": "CVSS 8.8, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -254,7 +284,9 @@
     "epss_score": 0.01789,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 8.8, direct dependency"
+    "reason": "CVSS 8.8, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -270,7 +302,9 @@
     "epss_score": 0.00436,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 8.2, direct dependency"
+    "reason": "CVSS 8.2, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -286,7 +320,9 @@
     "epss_score": 0.01703,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 8.1, direct dependency"
+    "reason": "CVSS 8.1, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -302,7 +338,9 @@
     "epss_score": 0.62575,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, EPSS 63%, direct dependency"
+    "reason": "CVSS 7.5, EPSS 63%, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -318,7 +356,9 @@
     "epss_score": 0.02397,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -334,7 +374,9 @@
     "epss_score": 0.49246,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, EPSS 49%, direct dependency"
+    "reason": "CVSS 7.5, EPSS 49%, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -350,7 +392,9 @@
     "epss_score": 0.01855,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -366,7 +410,9 @@
     "epss_score": 0.02978,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -382,7 +428,9 @@
     "epss_score": 0.05217,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -398,7 +446,9 @@
     "epss_score": 0.47102,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, EPSS 47%, direct dependency"
+    "reason": "CVSS 7.5, EPSS 47%, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -414,7 +464,9 @@
     "epss_score": 0.49774,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, EPSS 50%, direct dependency"
+    "reason": "CVSS 7.5, EPSS 50%, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -430,7 +482,9 @@
     "epss_score": 0.0272,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -446,7 +500,9 @@
     "epss_score": 0.0193,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -462,7 +518,9 @@
     "epss_score": 0.05291,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "requests",
@@ -478,7 +536,9 @@
     "epss_score": 0.07443,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -494,7 +554,9 @@
     "epss_score": 0.04851,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -510,7 +572,9 @@
     "epss_score": 0.00421,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -526,7 +590,9 @@
     "epss_score": 0.00418,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -542,7 +608,9 @@
     "epss_score": 0.00385,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -558,7 +626,9 @@
     "epss_score": 0.02453,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -574,7 +644,9 @@
     "epss_score": 0.01131,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -590,7 +662,9 @@
     "epss_score": 0.0041,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -606,7 +680,9 @@
     "epss_score": 0.02372,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -622,7 +698,9 @@
     "epss_score": 0.03071,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -638,7 +716,9 @@
     "epss_score": 0.03154,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -654,7 +734,9 @@
     "epss_score": 0.00385,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -670,7 +752,9 @@
     "epss_score": 0.0317,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -684,7 +768,9 @@
     "epss_score": null,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -700,7 +786,9 @@
     "epss_score": 0.00385,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -716,7 +804,9 @@
     "epss_score": 0.01184,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -732,7 +822,9 @@
     "epss_score": 0.01425,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -748,7 +840,9 @@
     "epss_score": 0.01601,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -764,7 +858,9 @@
     "epss_score": 0.00418,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -780,7 +876,9 @@
     "epss_score": 0.02293,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "flask",
@@ -796,7 +894,9 @@
     "epss_score": 0.03855,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "flask",
@@ -812,7 +912,9 @@
     "epss_score": 0.01884,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "flask",
@@ -828,7 +930,9 @@
     "epss_score": 0.01216,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.5, direct dependency"
+    "reason": "CVSS 7.5, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -844,7 +948,9 @@
     "epss_score": 0.02295,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.3, direct dependency"
+    "reason": "CVSS 7.3, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -860,7 +966,9 @@
     "epss_score": 0.15602,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.1, EPSS 16%, direct dependency"
+    "reason": "CVSS 7.1, EPSS 16%, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -876,7 +984,9 @@
     "epss_score": 0.01498,
     "in_kev": false,
     "tier": "HIGH",
-    "reason": "CVSS 7.1, direct dependency"
+    "reason": "CVSS 7.1, direct dependency",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -892,7 +1002,9 @@
     "epss_score": 0.00989,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 6.7, low predicted exploitation"
+    "reason": "CVSS 6.7, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -908,7 +1020,9 @@
     "epss_score": 0.01635,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 6.5, low predicted exploitation"
+    "reason": "CVSS 6.5, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -924,7 +1038,9 @@
     "epss_score": 0.00313,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 6.5, low predicted exploitation"
+    "reason": "CVSS 6.5, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -940,7 +1056,9 @@
     "epss_score": 0.02556,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 6.5, low predicted exploitation"
+    "reason": "CVSS 6.5, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -956,7 +1074,9 @@
     "epss_score": 0.01957,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 6.5, low predicted exploitation"
+    "reason": "CVSS 6.5, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -972,7 +1092,9 @@
     "epss_score": 0.03328,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 6.1, low predicted exploitation"
+    "reason": "CVSS 6.1, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -988,7 +1110,9 @@
     "epss_score": 0.03146,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 6.1, low predicted exploitation"
+    "reason": "CVSS 6.1, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "requests",
@@ -1004,7 +1128,9 @@
     "epss_score": 0.02974,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 6.1, low predicted exploitation"
+    "reason": "CVSS 6.1, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -1020,7 +1146,9 @@
     "epss_score": 0.01225,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 5.9, low predicted exploitation"
+    "reason": "CVSS 5.9, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -1036,7 +1164,9 @@
     "epss_score": 0.01606,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 5.9, low predicted exploitation"
+    "reason": "CVSS 5.9, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "requests",
@@ -1052,7 +1182,9 @@
     "epss_score": 0.0034,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 5.6, low predicted exploitation"
+    "reason": "CVSS 5.6, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -1068,7 +1200,9 @@
     "epss_score": 0.0096,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 5.5, low predicted exploitation"
+    "reason": "CVSS 5.5, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -1084,7 +1218,9 @@
     "epss_score": 0.00732,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 5.5, low predicted exploitation"
+    "reason": "CVSS 5.5, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -1100,7 +1236,9 @@
     "epss_score": 0.00126,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 5.5, low predicted exploitation"
+    "reason": "CVSS 5.5, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -1116,7 +1254,9 @@
     "epss_score": 0.00114,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 5.5, low predicted exploitation"
+    "reason": "CVSS 5.5, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -1132,7 +1272,9 @@
     "epss_score": 0.01573,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 5.4, low predicted exploitation"
+    "reason": "CVSS 5.4, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -1148,7 +1290,9 @@
     "epss_score": 0.01273,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 5.3, low predicted exploitation"
+    "reason": "CVSS 5.3, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -1164,7 +1308,9 @@
     "epss_score": 0.02388,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 5.3, low predicted exploitation"
+    "reason": "CVSS 5.3, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -1180,7 +1326,9 @@
     "epss_score": 0.01854,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 5.3, low predicted exploitation"
+    "reason": "CVSS 5.3, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "requests",
@@ -1196,7 +1344,9 @@
     "epss_score": 0.00845,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 5.3, low predicted exploitation"
+    "reason": "CVSS 5.3, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -1212,7 +1362,9 @@
     "epss_score": 0.02737,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 4.9, low predicted exploitation"
+    "reason": "CVSS 4.9, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -1228,7 +1380,9 @@
     "epss_score": 0.00177,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 4.5, low predicted exploitation"
+    "reason": "CVSS 4.5, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "requests",
@@ -1244,7 +1398,9 @@
     "epss_score": 0.00182,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 4.4, low predicted exploitation"
+    "reason": "CVSS 4.4, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -1260,7 +1416,9 @@
     "epss_score": 0.00629,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 4.0, low predicted exploitation"
+    "reason": "CVSS 4.0, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "django",
@@ -1276,7 +1434,9 @@
     "epss_score": 0.00781,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS 3.7, low predicted exploitation"
+    "reason": "CVSS 3.7, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -1290,7 +1450,9 @@
     "epss_score": null,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS unknown, low predicted exploitation"
+    "reason": "CVSS unknown, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -1306,7 +1468,9 @@
     "epss_score": 0.00384,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS unknown, low predicted exploitation"
+    "reason": "CVSS unknown, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -1322,7 +1486,9 @@
     "epss_score": 0.01102,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS unknown, low predicted exploitation"
+    "reason": "CVSS unknown, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "pillow",
@@ -1336,7 +1502,9 @@
     "epss_score": null,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS unknown, low predicted exploitation"
+    "reason": "CVSS unknown, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   },
   {
     "package": "flask",
@@ -1352,6 +1520,8 @@
     "epss_score": 0.00344,
     "in_kev": false,
     "tier": "LOW",
-    "reason": "CVSS unknown, low predicted exploitation"
+    "reason": "CVSS unknown, low predicted exploitation",
+    "suppressed": false,
+    "suppression_reason": null
   }
 ]
