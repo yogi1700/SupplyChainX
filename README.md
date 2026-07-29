@@ -83,6 +83,23 @@ pytest tests/
 
 It writes `sbom.json`, `report.json`, and `licenses.json` into the scanned project's directory, prints a prioritized vulnerability summary plus a separate license-risk summary to the console, and exits non-zero if anything crosses the policy threshold in `config/policy.json` (license findings don't affect that exit code - they're a separate, non-CI-blocking concern for now). Any finding matching an active entry in `--suppressions` is excluded from that exit-code decision but stays visible in `report.json`, tagged as suppressed with the documented reason.
 
+### Suppression file format
+
+`config/suppressions.json` is an array of waiver entries. Each one needs a `cve_id`, the `package` it applies to, and a `reason` - `expires` is optional (omit it, or leave it out entirely, for a waiver with no expiry):
+
+```json
+[
+  {
+    "cve_id": "CVE-2018-18074",
+    "package": "requests",
+    "reason": "Vulnerable code path (Authorization header leak on cross-domain redirect) is unreachable here - this service never issues cross-domain redirected requests. Tracked for upgrade in next dependency refresh.",
+    "expires": "2026-12-31"
+  }
+]
+```
+
+A suppression only matches if **both** the CVE ID and the package name match a real finding, and (when `expires` is set) today's date hasn't passed it yet - an expired entry stops matching automatically, so the finding goes back to blocking CI until someone either fixes it or writes a fresh waiver with a new reason. The file is empty (`[]`) by default; nothing is suppressed unless you explicitly add an entry.
+
 ## Testing it against real vulnerable projects
 
 I built three small sample projects with real, deliberately outdated pinned dependencies to actually exercise this rather than just trust the code.
