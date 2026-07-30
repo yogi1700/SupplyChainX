@@ -82,10 +82,10 @@
     ],
     "summary": "Django has a denial-of-service possibility in strip_tags()",
     "cvss_score": 5.3,
-    "epss_score": 0.14243,
+    "epss_score": 0.15322,
     "in_kev": false,
     "tier": "MEDIUM",
-    "reason": "CVSS 5.3, meaningful predicted exploitation (EPSS 14%)",
+    "reason": "CVSS 5.3, meaningful predicted exploitation (EPSS 15%)",
     "suppressed": false,
     "suppression_reason": null
   },

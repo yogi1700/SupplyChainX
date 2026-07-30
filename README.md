@@ -15,6 +15,7 @@ The reason I built it this way: running a raw vulnerability scanner against any 
 - Can fail a CI build if anything crosses a configurable policy threshold
 - Separately flags copyleft-licensed dependencies (GPL, AGPL, LGPL) - a real legal/compliance risk that has nothing to do with CVEs, and gets missed if a scanner only looks at vulnerabilities
 - Supports suppressing a specific finding with a documented reason and optional expiry date - an accepted risk stops blocking CI but stays visible in the full report, rather than either blocking every build forever or silently disappearing
+- Caches OSV.dev responses locally, keyed by package version and by vulnerability ID, so re-scanning an unchanged dependency tree doesn't re-hit the API for data that hasn't changed
 
 ## How it's put together
 
@@ -53,6 +54,7 @@ SupplyChainX/
 │   ├── enrichment.py        EPSS + CISA KEV lookups
 │   ├── license_check.py     flags copyleft-licensed dependencies
 │   ├── suppressions.py      accepted-risk waivers with reason + optional expiry
+│   ├── cache.py             local caching for OSV.dev responses
 │   ├── risk_engine.py       the actual prioritization logic
 │   ├── sbom.py               CycloneDX SBOM generation
 │   ├── report.py             console + JSON reporting
@@ -146,6 +148,15 @@ Total findings: 5  (CRITICAL=0 HIGH=0 MEDIUM=0 LOW=4)  [1 suppressed, excluded f
 
 The suppressed finding still shows up in the full `report.json`, tagged `"suppressed": true` with the documented reason - it's excluded from the pass/fail decision, not hidden. I also checked the expiry logic actually does something: setting `expires` to a past date makes the same suppression stop matching and the build goes back to failing, which is the point of an expiry - it forces a re-review instead of a waiver silently lasting forever.
 
+**Local caching measurably cuts real network calls, not just in theory.** I instrumented the actual `requests` calls made against `osv.dev` across two consecutive runs of the same project (the `django`/`pyyaml`/`requests`/`pillow`/`flask` sample from Test 1):
+
+```
+RUN 1 (cold cache): 163 OSV HTTP calls
+RUN 2 (warm cache): 0 OSV HTTP calls
+```
+
+My first version of this only cached the batch package→vulnerability-ID lookup, and measured almost no improvement (163 → 162) - because the actual bulk of the traffic is the *per-vulnerability detail* fetch (162 individual calls for that one project), which wasn't cached at all. Caching both the batch lookup (keyed by package+version) and the detail fetch (keyed by vulnerability ID) is what actually moved the number. Worth remembering: measuring the wrong thing (or not measuring at all) will make an ineffective cache look like it's working, right up until someone asks "how much did that actually save?"
+
 A couple of things worth noting from actually building this:
 
 - OSV's batch endpoint only returns vulnerability IDs, not details - fetching full details for the ~160 unique vulnerabilities one at a time took over two minutes. Since those are independent HTTP calls, fetching them concurrently (20 workers) brought that down to about 34 seconds.
@@ -155,7 +166,6 @@ A couple of things worth noting from actually building this:
 ## What's next
 
 - Support for more ecosystems (Go modules, Maven/Gradle)
-- Caching OSV/EPSS lookups locally so re-scanning an unchanged dependency tree doesn't re-hit every API
 
 ## What this reinforced for me
 

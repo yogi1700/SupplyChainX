@@ -13,6 +13,11 @@ from pathlib import Path
 
 from manifest_parser import parse_manifests
 from osv_client import query_batch, get_vuln_details
+from cache import (
+    load_cache, save_cache,
+    split_cached_packages, update_package_cache,
+    split_cached_vulns, update_vuln_cache,
+)
 from enrichment import get_epss_scores, get_kev_cve_ids
 from license_check import check_licenses
 from risk_engine import build_findings, apply_suppressions
@@ -47,16 +52,39 @@ def run(project_dir: Path, policy: dict, suppressions_path: Path | None = None) 
         return 0
     print(f"[SupplyChainX] Found {len(deps)} resolved package(s)")
 
-    print("[SupplyChainX] Querying OSV.dev for known vulnerabilities ...")
-    vulns_by_dep = query_batch(deps)
+    cache = load_cache()
+    cached_pkg_results, deps_to_query = split_cached_packages(deps, cache)
+
+    if deps_to_query:
+        print(f"[SupplyChainX] {len(deps) - len(deps_to_query)} package(s) served from local cache, "
+              f"querying OSV.dev for {len(deps_to_query)} ...")
+        fresh_pkg_results = query_batch(deps_to_query)
+        update_package_cache(cache, deps_to_query, fresh_pkg_results)
+        save_cache(cache)
+    else:
+        print(f"[SupplyChainX] All {len(deps)} package(s) served from local cache")
+        fresh_pkg_results = {}
+
+    vulns_by_dep = {**cached_pkg_results, **fresh_pkg_results}
 
     if not vulns_by_dep:
         print("[SupplyChainX] No known vulnerabilities found. Clean bill of health.")
         findings = []
     else:
         all_vuln_ids = {vid for ids in vulns_by_dep.values() for vid in ids}
-        print(f"[SupplyChainX] {len(all_vuln_ids)} unique vulnerability record(s) to fetch ...")
-        vuln_details = get_vuln_details(all_vuln_ids)
+
+        cached_vulns, vuln_ids_to_fetch = split_cached_vulns(all_vuln_ids, cache)
+        if vuln_ids_to_fetch:
+            print(f"[SupplyChainX] {len(cached_vulns)} vulnerability record(s) served from cache, "
+                  f"fetching {len(vuln_ids_to_fetch)} ...")
+            fresh_vulns = get_vuln_details(vuln_ids_to_fetch)
+            update_vuln_cache(cache, fresh_vulns)
+            save_cache(cache)
+        else:
+            print(f"[SupplyChainX] All {len(all_vuln_ids)} vulnerability record(s) served from cache")
+            fresh_vulns = {}
+
+        vuln_details = {**cached_vulns, **fresh_vulns}
 
         all_cve_ids = [
             cve

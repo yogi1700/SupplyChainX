@@ -84,7 +84,7 @@
     ],
     "summary": "Prototype Pollution in minimist",
     "cvss_score": 5.6,
-    "epss_score": 0.01884,
+    "epss_score": 0.01931,
     "in_kev": false,
     "tier": "LOW",
     "reason": "CVSS 5.6, low predicted exploitation",

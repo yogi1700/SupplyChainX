@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 .venv/
+.supplychainx_cache/
+.pytest_cache/

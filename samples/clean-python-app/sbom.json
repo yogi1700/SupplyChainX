@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.5",
-  "serialNumber": "urn:uuid:0ee3e11f-13d6-4c96-b1db-42b36557cf81",
+  "serialNumber": "urn:uuid:b2ff01fd-91a9-4979-998c-753c5e59c0c8",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-07-27T13:36:12.765305+00:00",
+    "timestamp": "2026-07-30T04:23:56.377452+00:00",
     "component": {
       "type": "application",
       "name": "clean-python-app"
