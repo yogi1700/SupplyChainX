@@ -104,7 +104,7 @@ A suppression only matches if **both** the CVE ID and the package name match a r
 
 ## Testing it against real vulnerable projects
 
-I built three small sample projects with real, deliberately outdated pinned dependencies to actually exercise this rather than just trust the code.
+I built several small sample projects with real, deliberately outdated (or deliberately specific) pinned dependencies to actually exercise this rather than just trust the code.
 
 **A Python project pinning `django==3.2.0`, `pyyaml==5.3.1`, `requests==2.19.1`, `pillow==8.0.0`, and `flask==0.12.2`** turned up 162 raw vulnerability records from OSV. After de-duplication (the same CVE is often reported under more than one advisory ID - OSV aggregates GitHub Security Advisories and PyPA advisories separately, and they frequently overlap) that came down to 85 distinct findings:
 
